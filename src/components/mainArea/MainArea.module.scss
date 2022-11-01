@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+}
+.button {
+  font-size: 18px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  background: rgb(50, 141, 210);
+  color: #fff;
+  padding: 0 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    background: rgb(35, 100, 150);
+  }
+  &.disabled {
+    background: rgb(146, 146, 146);
+    cursor: inherit;
+  }
+}
+.field {
+  width: 35vw;
+  height: 35vw;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #222;
+  @media (max-width: 900px) {
+    width: 70vw;
+    height: 70vw;
+  }
+  & h2 {
+    text-align: center;
+  }
+}

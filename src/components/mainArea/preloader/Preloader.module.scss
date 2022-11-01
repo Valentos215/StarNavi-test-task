@@ -1,0 +1,22 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloader {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  border-left-color: rgb(50, 141, 210);
+  border-top-color: rgb(50, 141, 210);
+  border-right-color: rgb(50, 141, 210);
+  animation: loader 2s linear infinite;
+}
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}

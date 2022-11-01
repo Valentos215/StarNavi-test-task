@@ -1,0 +1,16 @@
+.row {
+  flex: 1 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.square {
+  height: 100%;
+  flex: 1 0 auto;
+  border: 1px solid rgba(2, 2, 2, 0.6);
+  background: #fff;
+  transition: all 0.1s;
+  &.picked {
+    background: rgb(36, 204, 242);
+  }
+}

@@ -1,0 +1,62 @@
+.mode {
+  position: relative;
+  flex: 0 1 60%;
+  font-size: 18px;
+  line-height: 38px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+.button {
+  position: relative;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: 1px solid #777;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    height: 10px;
+    width: 2px;
+    background: rgba(3, 3, 3, 0.5);
+    transform: rotate(45deg);
+    transition: all 0.3s;
+  }
+  &:after {
+    transform: rotate(-45deg);
+    right: 27px;
+  }
+  &.active {
+    &:before {
+      transform: rotate(-45deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+}
+.expandMenu {
+  position: absolute;
+  top: 43px;
+  width: 100%;
+  border: 1px solid #777;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0px;
+  transition: all 0.3s;
+  &.active {
+    opacity: 1;
+    max-height: 200px;
+  }
+  &__item {
+    padding-left: 10px;
+    &:hover {
+      background: rgba(3, 3, 3, 0.2);
+    }
+  }
+}
