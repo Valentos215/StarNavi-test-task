@@ -1,6 +1,6 @@
-import { useEffect, useState, memo } from "react";
+import { useEffect, useState, memo } from 'react';
 
-import s from "./Mode.module.scss";
+import s from 'components/mainArea/mode/Mode.module.scss';
 
 type TMode = {
   name: string;
@@ -37,29 +37,18 @@ const Mode = memo(({ setIsStarted, setSize, modes }: IModeProps) => {
     setSize(selectedMode.field);
   }, [selectedMode, setSize]);
 
-  const buttonClassName = isExpanded
-    ? `${s.button} ${s.active}`
-    : `${s.button}`;
-  const expanMenuClassName = isExpanded
-    ? `${s.expandMenu} ${s.active}`
-    : `${s.expandMenu}`;
+  const buttonClassName = isExpanded ? `${s.button} ${s.active}` : `${s.button}`;
+  const expanMenuClassName = isExpanded ? `${s.expandMenu} ${s.active}` : `${s.expandMenu}`;
 
   return (
     <div tabIndex={1} className={s.mode} onBlur={() => setIsExpanded(false)}>
-      <div
-        onClick={() => setIsExpanded(!isExpanded)}
-        className={buttonClassName}
-      >
-        {selectedMode?.name || ""}
+      <div onClick={() => setIsExpanded(!isExpanded)} className={buttonClassName}>
+        {selectedMode?.name || ''}
       </div>
       <div className={expanMenuClassName}>
         {!!modes &&
           modes.map((mode) => (
-            <div
-              className={s.expandMenu__item}
-              key={mode.name}
-              onClick={() => onOptionClick(mode)}
-            >
+            <div className={s.expandMenu__item} key={mode.name} onClick={() => onOptionClick(mode)}>
               {mode.name}
             </div>
           ))}

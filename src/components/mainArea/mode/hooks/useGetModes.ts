@@ -1,6 +1,6 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from 'react';
 
-import axios from "axios";
+import axios from 'axios';
 
 type TMode = {
   name: string;
@@ -17,7 +17,7 @@ interface IUseGetModesResult {
 }
 
 const useGetModes = (): IUseGetModesResult => {
-  const url = "https://demo7919674.mockable.io";
+  const url = 'https://demo7919674.mockable.io';
 
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState<TMode[] | null>(null);

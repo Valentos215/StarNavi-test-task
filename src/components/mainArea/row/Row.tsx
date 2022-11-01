@@ -1,6 +1,6 @@
-import { memo } from "react";
+import { memo } from 'react';
 
-import s from "./Row.module.scss";
+import s from 'components/mainArea/row/Row.module.scss';
 
 interface IRowProps {
   y: number;
@@ -24,7 +24,7 @@ const Row = memo(({ y, fieldState, setFieldState, isStarted }: IRowProps) => {
           }
         }
         return row;
-      })
+      }),
     );
   };
 
@@ -38,11 +38,7 @@ const Row = memo(({ y, fieldState, setFieldState, isStarted }: IRowProps) => {
   return (
     <div className={s.row}>
       {fieldState.map((row, i) => (
-        <div
-          key={i}
-          className={squareClassName(i)}
-          onMouseEnter={() => onSquareHover(i)}
-        ></div>
+        <div key={i} className={squareClassName(i)} onMouseEnter={() => onSquareHover(i)}></div>
       ))}
     </div>
   );

@@ -1,6 +1,6 @@
-import { memo } from "react";
+import { memo } from 'react';
 
-import s from "./HoverSquares.module.scss";
+import s from 'components/hoverSquares/HoverSquares.module.scss';
 
 interface IHoverSquaresProps {
   fieldState: number[][] | null;
@@ -14,7 +14,7 @@ const HoverSquares = memo(({ fieldState }: IHoverSquaresProps) => {
         <div className={s.item} key={`${y}${col}`}>
           row {y + 1} col {col + 1}
         </div>
-      ))
+      )),
   );
 
   return (

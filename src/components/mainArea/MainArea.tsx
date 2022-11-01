@@ -1,12 +1,12 @@
-import { memo, useState, useEffect } from "react";
+import { memo, useState, useEffect } from 'react';
 
-import { range } from "utils/utils";
-import Row from "components/mainArea/row/Row";
-import Mode from "components/mainArea/mode/Mode";
-import Preloader from "components/mainArea/preloader/Preloader";
-import useGetModes from "components/mainArea/mode/hooks/useGetModes";
+import Row from 'components/mainArea/row/Row';
+import Mode from 'components/mainArea/mode/Mode';
+import Preloader from 'components/mainArea/preloader/Preloader';
+import useGetModes from 'components/mainArea/mode/hooks/useGetModes';
+import { range } from 'utils/utils';
 
-import s from "./MainArea.module.scss";
+import s from 'components/mainArea/MainArea.module.scss';
 
 type TMode = {
   name: string;
@@ -25,9 +25,7 @@ const MainArea = memo(({ fieldState, setFieldState }: IMainAreaProps) => {
 
   const { isLoading, response, error, doFetch } = useGetModes();
 
-  const buttonClassName = isStarted
-    ? `${s.button} ${s.disabled}`
-    : `${s.button}`;
+  const buttonClassName = isStarted ? `${s.button} ${s.disabled}` : `${s.button}`;
 
   useEffect(() => {
     if (!size) {
