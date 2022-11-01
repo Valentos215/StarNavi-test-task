@@ -32,7 +32,7 @@ const MainArea = memo(({ fieldState, setFieldState }: IMainAreaProps) => {
       return;
     }
     setFieldState(range(size));
-  }, [size, setFieldState]);
+  }, [size, isStarted, setFieldState]);
 
   useEffect(() => {
     doFetch();
